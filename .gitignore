@@ -1,0 +1,11 @@
+build/
+node_modules/
+dist/
+release/
+*.db
+*.wasm
+web/public/wasm_exec.js
+.env
+.env.*
+*.log
+.netlify/
