@@ -1,0 +1,11 @@
+br\gov\serpro\rtc\testesunitarios\simplesnacional\Teste_SimplesNacionalCalculoService.class
+br\gov\serpro\rtc\testesunitarios\simplesnacional\Teste_SimplesNacionalObservabilidadeService$1.class
+br\gov\serpro\rtc\testesunitarios\simplesnacional\Teste_SimplesNacionalObservabilidadeService.class
+br\gov\serpro\rtc\testesintegracao\simplesnacional\SimplesNacionalControllerTest.class
+br\gov\serpro\rtc\testesunitarios\config\db\Teste_DatabaseDownloadService.class
+br\gov\serpro\rtc\testesintegracao\simplesnacional\ParametrizacaoSimplesNacionalTest.class
+br\gov\serpro\rtc\testesunitarios\atividadesimples\Teste_DerivacaoAnexosSimples.class
+br\gov\serpro\rtc\testesintegracao\atividadesimples\AtividadeSimplesControllerTest.class
+br\gov\serpro\rtc\testesintegracao\versao\VersaoControllerTest.class
+br\gov\serpro\rtc\testesunitarios\atividadesimples\Teste_AtividadeSimplesService.class
+br\gov\serpro\rtc\testesunitarios\atividadesimples\Teste_AtividadeSimplesService$1.class

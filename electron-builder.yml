@@ -1,0 +1,30 @@
+appId: br.com.biazin.rfnovaregra
+productName: RF Nova Regra
+copyright: MIT
+directories:
+  output: release
+files:
+  - package.json
+  - desktop/**
+  - shared/**
+  - web/dist/**
+extraResources:
+  - from: build/jre
+    to: jre
+  - from: build/jars
+    to: jars
+  - from: build/db
+    to: db
+asar: true
+win:
+  target:
+    - target: nsis
+      arch: [x64]
+  artifactName: RF-Nova-Regra-Setup-${version}.exe
+  signAndEditExecutable: false
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true

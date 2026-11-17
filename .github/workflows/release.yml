@@ -1,0 +1,41 @@
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  instalador:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+          cache: maven
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: upstream/gerador-danfse/go.mod
+      - run: npm ci
+      - run: powershell -NoProfile -ExecutionPolicy Bypass -File scripts/gerar-banco.ps1
+      - run: powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-java.ps1 -SemTestes
+      - run: powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-wasm.ps1
+      - run: powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-jre.ps1
+      - run: npm run dist
+      - name: Publicar no Release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $tag = '${{ github.ref_name }}'
+          gh release view $tag 2>$null
+          if ($LASTEXITCODE -ne 0) { gh release create $tag --title $tag --notes "Veja o CHANGELOG.md." }
+          gh release upload $tag (Get-ChildItem release\RF-Nova-Regra-Setup-*.exe).FullName --clobber

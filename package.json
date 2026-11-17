@@ -1,0 +1,34 @@
+{
+  "name": "rf-nova-regra",
+  "productName": "RF Nova Regra",
+  "version": "0.1.0",
+  "description": "Calculadoras da Reforma Tributária do Consumo (Regime Regular, Simples Nacional e DANFSe) em um só projeto, web e desktop. Projeto não oficial.",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "main": "desktop/main.mjs",
+  "author": "Ricardo Biazin",
+  "scripts": {
+    "dev": "vite --config web/vite.config.ts",
+    "build": "vite build --config web/vite.config.ts",
+    "preview": "vite preview --config web/vite.config.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:e2e": "node tests/e2e-desktop.mjs",
+    "desktop": "node scripts/run-electron.mjs",
+    "dist": "npm run build && electron-builder --win nsis --publish never"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "electron": "^39.0.0",
+    "electron-builder": "^26.0.0",
+    "typescript": "^5.9.0",
+    "vite": "^7.0.0",
+    "vitest": "^3.2.0"
+  },
+  "allowScripts": {
+    "electron@39.8.10": true,
+    "esbuild@0.28.2": true,
+    "electron-winstaller@5.4.0": true
+  }
+}

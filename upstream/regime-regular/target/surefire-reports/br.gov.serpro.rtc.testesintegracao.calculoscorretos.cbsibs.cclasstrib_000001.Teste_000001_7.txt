@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: br.gov.serpro.rtc.testesintegracao.calculoscorretos.cbsibs.cclasstrib_000001.Teste_000001_7
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.056 s -- in br.gov.serpro.rtc.testesintegracao.calculoscorretos.cbsibs.cclasstrib_000001.Teste_000001_7

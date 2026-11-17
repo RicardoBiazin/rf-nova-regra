@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: br.gov.serpro.rtc.testesunitarios.service.Teste_NcmNbsAplicavelService_TabelaVerdade
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.400 s -- in br.gov.serpro.rtc.testesunitarios.service.Teste_NcmNbsAplicavelService_TabelaVerdade

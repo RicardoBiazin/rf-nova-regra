@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: br.gov.serpro.rtc.testesunitarios.exception.Teste_ConcreteException
+-------------------------------------------------------------------------------
+Tests run: 35, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.032 s -- in br.gov.serpro.rtc.testesunitarios.exception.Teste_ConcreteException

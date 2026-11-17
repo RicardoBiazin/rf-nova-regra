@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: br.gov.serpro.rtc.testesintegracao.dadosabertos.controller.DadosAbertosControllerTest
+-------------------------------------------------------------------------------
+Tests run: 53, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.356 s -- in br.gov.serpro.rtc.testesintegracao.dadosabertos.controller.DadosAbertosControllerTest

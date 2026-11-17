@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  testes:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+          cache: maven
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: upstream/gerador-danfse/go.mod
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+      - name: Banco de dados
+        run: powershell -NoProfile -ExecutionPolicy Bypass -File scripts/gerar-banco.ps1
+      - name: Serviços Java (com testes da Receita)
+        run: powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-java.ps1
+      - name: DANFSe (testes Go e WebAssembly)
+        run: |
+          cd upstream/gerador-danfse
+          go test -skip TestRun_BindFalhaRetornaErroSemHang ./...
+          cd ../..
+          powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-wasm.ps1
+      - name: JRE e teste ponta a ponta do desktop
+        run: |
+          powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-jre.ps1
+          npm run test:e2e

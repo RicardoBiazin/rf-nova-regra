@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: br.gov.serpro.rtc.testesunitarios.service.Teste_DadosAbertosService_ConsultarAliquota
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.026 s -- in br.gov.serpro.rtc.testesunitarios.service.Teste_DadosAbertosService_ConsultarAliquota
