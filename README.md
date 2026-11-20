@@ -64,4 +64,4 @@ Se a variável `ELECTRON_RUN_AS_NODE` estiver definida (acontece dentro do VS Co
 
 ## Licença
 
-MIT (veja [LICENSE](LICENSE)). O código em `upstream/` é da Receita Federal do Brasil, também MIT.
+MIT (veja [LICENSE](LICENSE)). O código em `upstream/` é da Receita Federal do Brasil, também MIT (veja [NOTICE.md](NOTICE.md)).

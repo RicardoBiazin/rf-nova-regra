@@ -2,6 +2,11 @@
 
 Formato: [Mantenha um Changelog](https://keepachangelog.com/pt-BR/1.1.0/). Versionamento: [SemVer](https://semver.org/lang/pt-BR/).
 
+## [Não lançado]
+
+### Alterado
+- `LICENSE` agora é só o texto MIT (o GitHub passa a reconhecer a licença); o aviso sobre o código da Receita foi para `NOTICE.md`.
+
 ## [0.1.0] - 2026-11-17
 
 ### Adicionado

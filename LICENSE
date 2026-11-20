@@ -19,10 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-Os diretórios upstream/regime-regular, upstream/simples-nacional e
-upstream/gerador-danfse contêm código da Receita Federal do Brasil, distribuído
-sob a licença MIT (Copyright (c) 2026 Receita Federal do Brasil). Cada um mantém o
-seu próprio arquivo LICENSE.
